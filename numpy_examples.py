@@ -7,28 +7,33 @@ import numpy as np
 
 
 # a = np.array([[1, 2],
-#               [3, 4]])
+#               [5, 6]])
 #
-# b = np.array([[10, 20],
-#               [30, 40]])
+# b = np.array([[3, 7],
+#               [4, 8]])
 #
-# c = np.hstack((a, b))
-# print(c)
-#
-# d = np.vstack((a, b))
-# print(d)
-#
-# a1 = np.array([1, 2, 3, 4])
-# a2 = np.array([11, 22, 33, 44])
-# a3 = np.array([111, 222, 333, 444])
-#
-# e = np.column_stack((a1, a2, a3))
-# print(e)
+# print(a*2)
+# print(b+5)
+# print(a+b)
+# print(a*b)
+# print(a>b)
 
-a = np.array([[ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12],
-              [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]])
 
-b, c, d = np.hsplit(a, 3)
-print(b)
-print(c)
+c = np.array([[1, 2, 5, 7],
+              [8, 3, 6, 2],
+              [9, 8, 4, 8]])
+
+
+print(c.sum())
+print(c.sum(axis=0))
+print(c.sum(axis=1))
+
+print(c.max())
+print(c.max(axis=0))
+print(c.max(axis=1))
+
+d = np.unique(c)
 print(d)
+d, e = np.unique(c, return_counts=True)
+print(d)
+print(e)
