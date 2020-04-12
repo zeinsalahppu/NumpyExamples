@@ -6,34 +6,42 @@ simple NumPy Examples
 import numpy as np
 
 
-# a = np.array([[1, 2],
-#               [5, 6]])
+a1 = np.array([[1, 1, 1],
+               [2, 2, 2],
+               [3, 3, 3]])
+
+b1 = np.array([[2, 2, 2],
+               [2, 2, 2],
+               [2, 2, 2]])
 #
-# b = np.array([[3, 7],
-#               [4, 8]])
+# c1 = a1*b1
+# print(c1)
+# print(c1.shape)
 #
-# print(a*2)
-# print(b+5)
-# print(a+b)
-# print(a*b)
-# print(a>b)
+# c1 = np.dot(a1, b1)
+# print(c1)
+# print(c1.shape)
+
+ma1 = np.mat(a1)
+mb1 = np.mat(b1)
+
+c1 = ma1 * mb1
+print(c1)
+print(c1.shape)
 
 
-c = np.array([[1, 2, 5, 7],
-              [8, 3, 6, 2],
-              [9, 8, 4, 8]])
 
+a2 = np.array([[3, 2, 1, 5],
+               [9, 1, 3, 0]])
 
-print(c.sum())
-print(c.sum(axis=0))
-print(c.sum(axis=1))
+b2 = np.array([[2, 9, 0],
+               [1, 3, 5],
+               [2, 4, 7],
+               [8, 1, 5]])
 
-print(c.max())
-print(c.max(axis=0))
-print(c.max(axis=1))
+ma2 = np.mat(a2)
+mb2 = np.mat(b2)
 
-d = np.unique(c)
-print(d)
-d, e = np.unique(c, return_counts=True)
-print(d)
-print(e)
+c2 = ma2 * mb2
+print(c2)
+print(c2.shape)
